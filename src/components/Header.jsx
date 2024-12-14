@@ -1,9 +1,14 @@
 import { useState } from "react";
 import { Navbar } from "./Navbar";
+import { getImage } from "../utils/images";
+import { getGenericContent } from "../utils/content";
 
 
 export const Header = () => {
     const [navOpen, setNavOpen] = useState(false);
+
+    const { logo } = getImage();
+    const { name } = getGenericContent();
 
     return (
         <header className="fixed top-0 left-0 w-full h-20 flex items-center z-40 bg-gradient-to-b from-zinc-900 to-zinc-900/0">
@@ -11,10 +16,10 @@ export const Header = () => {
                 <h1>
                     <a href="/" className="logo">
                         <img
-                            src="/images/logo.svg"
+                            src={logo}
                             width={35}
                             height={35}
-                            alt="Aryan Mane"
+                            alt={name}
                         />
                     </a>
                 </h1>
