@@ -1,8 +1,7 @@
 import React from "react";
-import { ButtonPrimary } from "./Button";
+import { ButtonPrimary, ButtonOutline } from "./Button";
 import { getGenericContent, getHeroContent } from "../utils/content";
 import { getImage } from "../utils/images";
-
 
 
 
@@ -32,6 +31,8 @@ export default function Hero() {
                             <span className="relative w-2 h-2 rounded-full bg-emerald-400">
                                 <span className="absolute inset-0 rounded-full bg-emerald-400 animate-ping"></span>
                             </span>
+                            {name}
+                            <p>-</p>
                             {workStatus}
                         </div>
                     </div>
@@ -46,11 +47,15 @@ export default function Hero() {
                             icon="download"
                         />
 
-                        ButtonOutline
+                        <ButtonOutline 
+                            href="#about"
+                            label="Scroll Down"
+                            icon="arrow_downward"
+                        />
                     </div>
                 </div>
 
-                <div className=" lg:block">
+                <div className="hidden lg:block">
                     <figure className="w-full max-w-[480px] ml-auto bg-gradient-to-t from-sky-400 via-25% via-sky-400/40 to-65% rounded-[60px] overflow-hidden">
                         <img
                             src={heroBanner}
