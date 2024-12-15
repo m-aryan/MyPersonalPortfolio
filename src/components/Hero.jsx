@@ -5,7 +5,7 @@ import { getImage } from "../utils/images";
 
 
 
-export default function Hero() {
+export function Hero() {
 
     const { avatar, heroBanner } = getImage();
     const { name } = getGenericContent();
@@ -43,7 +43,7 @@ export default function Hero() {
 
                     <div className="flex items-center gap-3">
                         <ButtonPrimary
-                            label="Download Resume"
+                            label="Download CV"
                             icon="download"
                         />
 
