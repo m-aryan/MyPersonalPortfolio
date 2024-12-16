@@ -24,7 +24,7 @@ export const About = () => {
         >
             <div className="container">
                 <div className="bg-zinc-800/50 p-7 rounded-2xl
-                 md:p-12">
+                 md:p-12 reveal-up">
                     <p className="text-zinc-300 mb-7 md:mb-8mg:text-xl md:max-w-[80ch]">
                         {aboutData.introduction}
                     </p>

@@ -4,13 +4,7 @@ import React from "react";
 
 // ----------------------------- Primary Button -----------------------------
 
-const ButtonPrimary = ({
-    href,
-    target = '_self',
-    label,
-    icon,
-    classes
-}) => {
+const ButtonPrimary = ({ href, target = '_self', label, icon, classes }) => {
     if (href) {
         return (
             <a href={href}
@@ -56,13 +50,7 @@ ButtonPrimary.PropTypes = {
 
 // ----------------------------- Outline Button -----------------------------
 
-const ButtonOutline = ({
-    href,
-    target = '_self',
-    label,
-    icon,
-    classes
-}) => {
+const ButtonOutline = ({ href, target = '_self', label, icon, classes }) => {
     if (href) {
         return (
             <a href={href}
