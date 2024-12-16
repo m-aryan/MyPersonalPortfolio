@@ -4,16 +4,16 @@ import getImage from "../utils/images";
 
 export const About = () => {
 
-    const { logo } = getImage();
-    const { introduction, yrOfExp, projectsDone } = getAboutContent();
+    const imageData = getImage();
+    const aboutData = getAboutContent();
     const aboutItems = [
         {
             label: 'Projects done',
-            number: projectsDone
+            number: aboutData.projectsDone
         },
         {
             label: 'Years of experience',
-            number: yrOfExp
+            number: aboutData.yrOfExp
         }
     ];
 
@@ -25,8 +25,8 @@ export const About = () => {
             <div className="container">
                 <div className="bg-zinc-800/50 p-7 rounded-2xl
                  md:p-12">
-                    <p className="text-zinc-300 mb-4 md:mb-8mg:text-xl md:max-w-[60ch]">
-                        {introduction}
+                    <p className="text-zinc-300 mb-7 md:mb-8mg:text-xl md:max-w-[80ch]">
+                        {aboutData.introduction}
                     </p>
 
                     <div className="flex flex-wrap items-center gap-4 md:gap-7">
@@ -47,7 +47,7 @@ export const About = () => {
                             ))
                         }
 
-                        <img src={logo}
+                        <img src={imageData.logo}
                             alt="Logo"
                             width={30}
                             height={30}

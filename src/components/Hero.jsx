@@ -2,13 +2,15 @@ import React from "react";
 import { ButtonPrimary, ButtonOutline } from "./Button";
 import { getGenericContent, getHeroContent } from "../utils/content";
 import { getImage } from "../utils/images";
+import { ResumeDownload } from "../utils/resume";
 
 
 
 export function Hero() {
 
-    const { avatar, heroBanner } = getImage();
-    const { name } = getGenericContent();
+    const imageData = getImage();
+    const generalData = getGenericContent();
+    const { resume } = ResumeDownload();
     const { tagline, workStatus } = getHeroContent();
     return (
         <section
@@ -19,10 +21,10 @@ export function Hero() {
                 <div>
                     <div className="flex items-center gap-3">
                         <figure className="img-box w-9 h-9 rounded-lg">
-                            <img src={avatar}
+                            <img src={imageData.avatar}
                                 width={40}
                                 height={40}
-                                alt={name}
+                                alt={generalData.name}
                                 className="img-cover"
                             />
                         </figure>
@@ -31,7 +33,7 @@ export function Hero() {
                             <span className="relative w-2 h-2 rounded-full bg-emerald-400">
                                 <span className="absolute inset-0 rounded-full bg-emerald-400 animate-ping"></span>
                             </span>
-                            {name}
+                            {generalData.name}
                             <p>-</p>
                             {workStatus}
                         </div>
@@ -43,6 +45,8 @@ export function Hero() {
 
                     <div className="flex items-center gap-3">
                         <ButtonPrimary
+                            href={resume}
+                            target="_blank"
                             label="Download CV"
                             icon="download"
                         />
@@ -58,18 +62,15 @@ export function Hero() {
                 <div className="hidden lg:block">
                     <figure className="w-full max-w-[480px] ml-auto bg-gradient-to-t from-sky-400 via-25% via-sky-400/40 to-65% rounded-[60px] overflow-hidden">
                         <img
-                            src={heroBanner}
+                            src={imageData.heroBanner}
                             width={656}
                             height={800}
                             className="w-full"
-                            alt={name}
+                            alt={generalData.name}
                         />
-
                     </figure>
                 </div>
-
             </div>
-
         </section>
     )
 }
