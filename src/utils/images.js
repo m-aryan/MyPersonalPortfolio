@@ -2,7 +2,6 @@
 export function getImage() {
     return {
         avatar: "/images/avatar-1.jpg",
-        css3: "/images/css3.svg",
         favicon: "/images/favicon.svg",
         figma: "/images/figma.svg",
         heroBanner: "/images/hero-banner.png",
@@ -34,9 +33,10 @@ export function getImage() {
         springboot: "/images/springboot.svg",
         aws: "/images/aws.svg",
         nextjs: "/images/next.svg",
-        tensorflow: "/images/tensorflow.svg",
-        expo: "/images/expo.svg",
         git: "/images/git.svg",
+        flutter: "/images/flutter.svg",
+        dart: "/images/dart.svg",
+        androidstudio: "/images/androidstudio.svg",
     };
 }
 

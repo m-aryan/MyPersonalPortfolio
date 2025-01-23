@@ -1,8 +1,8 @@
 import getImage from "./images";
 
 const {
-    python, java, mysql, postgres, aws, css3, javascript, postman, powerbi, firebase, spring, springboot, nextjs, tensorflow,
-    tailwindcss, figma, mongodb, react, git, expo, project1, project2, project3, project4, project5, project6,
+    python, java, mysql, postgres, aws, javascript, postman, powerbi, firebase, spring, springboot, nextjs,
+    tailwindcss, figma, mongodb, react, git, flutter, dart, androidstudio, project1, project2, project3, project4, project5, project6,
     people1, people2, people3, people4, people5, people6
 } = getImage();
 
@@ -38,19 +38,29 @@ export function getSkillContent() {
         skillTagline: "Discover the powerful tools & technologies I use to create scalable, high-performing websites and applications.",
         skillItem: [
             {
-                imgSrc: tailwindcss,
-                label: 'TailwindCSS',
-                desc: 'User Interface'
+                imgSrc: flutter,
+                label: 'Flutter',
+                desc: 'Mobile Dev.'
             },
             {
-                imgSrc: java,
-                label: 'Java',
-                desc: 'Language'
+                imgSrc: springboot,
+                label: 'Spring Boot',
+                desc: 'Framework'
+            },
+            {
+                imgSrc: androidstudio,
+                label: 'Android Studio',
+                desc: 'Mobile Dev.'
             },
             {
                 imgSrc: figma,
                 label: 'Figma',
                 desc: 'Design Tool'
+            },
+            {
+                imgSrc: dart,
+                label: 'Dart',
+                desc: 'Language'
             },
             {
                 imgSrc: postgres,
@@ -63,14 +73,9 @@ export function getSkillContent() {
                 desc: 'Analysis Tool'
             },
             {
-                imgSrc: css3,
-                label: 'CSS',
+                imgSrc: tailwindcss,
+                label: 'TailwindCSS',
                 desc: 'User Interface'
-            },
-            {
-                imgSrc: springboot,
-                label: 'Spring Boot',
-                desc: 'Framework'
             },
             {
                 imgSrc: mongodb,
@@ -81,16 +86,6 @@ export function getSkillContent() {
                 imgSrc: nextjs,
                 label: 'Next.js',
                 desc: 'Framework'
-            },
-            {
-                imgSrc: tensorflow,
-                label: 'TensorFlow',
-                desc: 'Framework'
-            },
-            {
-                imgSrc: expo,
-                label: 'Expo',
-                desc: 'Mobile Dev.'
             },
             {
                 imgSrc: mysql,
@@ -106,6 +101,11 @@ export function getSkillContent() {
                 imgSrc: git,
                 label: 'Git/Github',
                 desc: 'VCS'
+            },
+            {
+                imgSrc: java,
+                label: 'Java',
+                desc: 'Language'
             },
             {
                 imgSrc: aws,
